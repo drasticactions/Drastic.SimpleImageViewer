@@ -42,11 +42,6 @@ namespace SimpleImageViewer {
 		[DesignatedInitializer]
 		IntPtr Constructor ([NullAllowed] ImageViewerConfiguration configuration);
 
-		// -(instancetype _Nullable)initWithCoder:(NSCoder * _Nonnull)aDecoder __attribute__((objc_designated_initializer));
-		//[Export ("initWithCoder:")]
-		//[DesignatedInitializer]
-		//IntPtr Constructor (NSCoder aDecoder);
-
 		// -(void)viewDidLoad;
 		[Export ("viewDidLoad")]
 		void ViewDidLoad ();
