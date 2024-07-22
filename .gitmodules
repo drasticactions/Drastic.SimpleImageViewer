@@ -1,0 +1,3 @@
+[submodule "external/SimpleImageViewer"]
+	path = external/SimpleImageViewer
+	url = git@github.com:drasticactions/SimpleImageViewer.git

@@ -1,13 +1,43 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0-ios</TargetFramework>
+    <TargetFrameworks>net8.0-ios;net8.0-maccatalyst</TargetFrameworks>
     <Nullable>enable</Nullable>
     <ImplicitUsings>true</ImplicitUsings>
     <IsBindingProject>true</IsBindingProject>
+    <IsPackable>true</IsPackable>
+    <Description>Drastic.SimpleImageViewer is binding of SimpleImageViewer, an iOS/Mac Catalyst Image View Controller.</Description>
+    <Version>1.0.0</Version>
+    <Company>Drastic Actions</Company>
+    <Copyright>Copyright (C) Drastic Actions</Copyright>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="../README.md" Pack="true" PackagePath="" Visible="false" />
+    <None Include="../favicon.png" Pack="true" PackagePath="" Visible="false" />
+  </ItemGroup>
 
   <ItemGroup>
     <ObjcBindingApiDefinition Include="ApiDefinition.cs" />
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
+
+  <ItemGroup>
+    <NativeReference Include="..\Frameworks\SimpleImageViewer.xcframework">
+      <Kind>Framework</Kind>
+      <SmartLink>False</SmartLink>
+    </NativeReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <Authors>$(Company)</Authors>
+    <PackageTags>SimpleImageViewer uiimageview uiimageviewcontroller uikit ios mac catalyst</PackageTags>
+    <PackageProjectUrl>https://github.com/drasticactions/Drastic.SimpleImageViewer</PackageProjectUrl>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageIcon>favicon.png</PackageIcon>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
 </Project>
